@@ -1,0 +1,24 @@
+{
+  "name": "image-searcher",
+  "version": "1.0.0",
+  "description": "Microservice for searching images",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anders462/image-searcher.git"
+  },
+  "keywords": [
+    "search",
+    "image"
+  ],
+  "author": "Anders Bengtsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anders462/image-searcher/issues"
+  },
+  "homepage": "https://github.com/anders462/image-searcher#readme"
+}
