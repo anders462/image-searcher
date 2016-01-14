@@ -1,6 +1,6 @@
 "use strict"
 
-var Search = require(process.cwd() + '/app/model/users.js'),
+var Search = require(process.cwd() + '/app/model/terms.js'),
     Bing = require('bing.search'),
     util = require('util');
 
