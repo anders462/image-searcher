@@ -2,7 +2,7 @@
 var express = require('express'),
     app = express(),
     mongoose = require('mongoose'),
-    dotenv = require('dotenv').config({silent: true}),
+    dotenv = require('dotenv').load(),
     routes = require(process.cwd() + '/app/routes/index.js');
 
       //set public and bower directory paths relative to server root
