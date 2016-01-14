@@ -11,7 +11,7 @@ var express = require('express'),
     //set port to env.Port and 3000 as fallback
     app.set('port', (process.env.PORT || 3000));
 
-    mongoose.connect(process.env.HEROKU_MONGO_URI || "mongodb://localhost:27017/imagesearcher");
+    mongoose.connect(process.env.MONGO_URI || "mongodb://localhost:27017/imagesearcher");
 
     var db = mongoose.connection;
     db.on('error', console.error.bind(console, 'Database failed to connect!'));
