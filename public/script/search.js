@@ -15,7 +15,7 @@ console.log(term);
 
 if (term !=""){
 var request = new XMLHttpRequest();
-request.open('GET', '/api/search/' + term, true);
+request.open('GET', 'https://image-searcher.herokuapp.com/api/search/' + term, true);
 
 request.onload = function() {
   if (request.status >= 200 && request.status < 400) {
@@ -45,7 +45,7 @@ request.send();
 };
 
 $('#latest').click(function(){
-  $.getJSON('/api/latest', function(data) {
+  $.getJSON('https://image-searcher.herokuapp.com/api/latest/', function(data) {
     $("#content").empty();
     data.forEach(function(value){
       $('#content').append('<tr><td><strong>Search Term:</strong>&nbsp&nbsp' + value.term + ',     ' + '<strong>Date:</strong>    ' + value.date + '</td></tr>');
