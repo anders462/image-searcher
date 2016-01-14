@@ -20,5 +20,16 @@
   "bugs": {
     "url": "https://github.com/anders462/image-searcher/issues"
   },
-  "homepage": "https://github.com/anders462/image-searcher#readme"
+  "homepage": "https://github.com/anders462/image-searcher#readme",
+  "dependencies": {
+    "bing.search": "^1.0.1",
+    "dotenv": "^1.2.0",
+    "express": "^4.13.3",
+    "kerberos": "0.0.17",
+    "mongodb": "^2.1.4",
+    "mongoose": "^4.3.5"
+  },
+  "engines": {
+    "node": "4.2.3"
+  }
 }

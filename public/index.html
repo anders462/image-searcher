@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Image Search Abtraction Microservice</title>
+
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/public/css/main.css" rel="stylesheet">
+  </head>
+
+  <body>
+<div class="container">
+  <div class="jumbotron">
+    <h2>Image Search Abtraction Microservice</h2></br>
+
+    <h4> User stories:</h4>
+    <ol class="user-stories">
+      <li>I can get the image URLs, alt text and page urls for a set of images relating to a given search string.</li>
+      <li>I can paginate through the responses by adding a page number parmeter to the URL.</li>
+      <li>I can get a list of the most recently submitted search strings.</li>
+    </ol>
+  </div>
+  <div class="examples">
+    <blockquote>
+    <h3>Example API usage:</h3>
+      <span class="urls"><strong>Image search:</strong> https://image-searcher.herokuapp.com/api/search/cats%20funny</span></br>
+      <span class="urls"><strong>Pagination:</strong> https://image-searcher.herokuapp.com/api/search/lolcats%20funny/5</span></br>
+      <span class="urls"><strong>Latest Searches:</strong> https://image-searcher.herokuapp.com/api/latest/</span>
+    </blockquote>
+    <blockquote>
+    <h3>Example output in JSON:</h3>
+    <span class="urls"> <strong>Search: </strong> [
+    {
+  "context": "http://bonuscats.com/funny-cats",
+  "thumbnail": "http://ts3.mm.bing.net/th?id=OIP.M51588078331fb12f8ea48f6152131e52o0&pid=15.1",
+  "snippet": "Funny cats → Check out this funny cat Tuesday (07)",
+  "url": "http://bonuscats.com/images/funnycats-55630.jpg"
+}, .....
+    ]
+  </strong></br></br>
+
+<span class="urls"> <strong>Latest: </strong>[
+{
+"term": "cat funny",
+"date": "2016-01-13T20:30:00.196Z"
+}, ....
+]
+</span>
+</blockquote>
+<blockquote >
+<h3>Example Client Implementation:</h3>
+</blockquote>
+</div>
+  <div class="form-group">
+    <label for="search" class="col-sm-2 control-label search">Search Images:</label>
+    <div class="col-sm-6">
+      <input class="form-control" type="text" id="search" name="search" placeholder="funny cats" value="">
+    </div>
+    <div class="col-sm-4 btn-group">
+      <button type="button" class="btn btn-primary" id="submit">Search</button>
+      <button type="button" class="btn btn-success" id="latest">Latest</button>
+      <button type="button" class="btn btn-warning" id="clear">Clear</button>
+
+    </div>
+  </div>
+<!-- </form> -->
+</br></br>
+
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class="tableHeader text-center">Result</th>
+      </tr>
+    </thead>
+    <tbody class="" id="content">
+
+    </tbody>
+  </table>
+</div>
+<p id="name">By Anders Bengtsson</p>
+</div>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/public/script/search.js"></script>
+
+
+  </body>
+</html>
