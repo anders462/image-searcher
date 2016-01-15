@@ -70,19 +70,32 @@
 <!-- </form> -->
 </br></br>
 
-<div class="table-responsive">
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th class="tableHeader text-center">Result</th>
+<div class="table-responsive" >
+<table class="table table-striped table-bordered" id="searchRes">
+      <thead>
+      <tr class="result">
+            <th class="text-center">Image Search Results</th>
       </tr>
     </thead>
     <tbody class="" id="content">
-
     </tbody>
-  </table>
+</table>
 </div>
-<p id="name">By Anders Bengtsson</p>
+
+<div class="table-responsive" id="latestRes">
+<table class="table table-striped table-bordered">
+      <thead>
+      <tr class="result">
+            <th>Search Term</th>
+            <th>Date</th>
+      </tr>
+    </thead>
+    <tbody class="" id="history">
+    </tbody>
+</table>
+
+<hr>
+<p id="name">Developed by: Anders Bengtsson</p>
 </div>
 
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>

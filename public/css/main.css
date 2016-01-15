@@ -35,3 +35,12 @@ img {
 #name {
   color:grey;
 }
+
+.table-responsive {
+  padding-top: 20px;
+
+}
+
+thead tr th {
+  background-color: lightgrey;
+}
